@@ -25,6 +25,6 @@ $ git clone https://github.com/rasplay/DCMotorKeyControl.git
 $ cd DCMotorKeyControl
 
 and, run
-$ sudo python ps3joy.py
+$ sudo python joystick.py
 
 Enjoy!!  
