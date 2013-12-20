@@ -21,8 +21,8 @@ Installation Joystick Driver
 $ sudo apt-get install joystick
 
 DCMotorKeyControl Clone
-$ git clone https://github.com/rasplay/DCMotorKeyControl.git
-$ cd DCMotorKeyControl
+$ git clone https://github.com/rasplay/DCMotorJoystickControl
+$ cd DCMotorJoystickControl
 
 and, run
 $ sudo python joystick.py
