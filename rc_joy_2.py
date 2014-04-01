@@ -12,9 +12,7 @@ M1_B = 17
 M2_A = 27
 M2_B = 22
 
-ON_LED = 18
-
-#gpio.cleanup()
+gpio.cleanup()
 
 gpio.setmode(gpio.BCM)
 
@@ -23,7 +21,6 @@ gpio.setup(M1_A, gpio.OUT)
 gpio.setup(M1_B, gpio.OUT)
 gpio.setup(M2_A, gpio.OUT)
 gpio.setup(M2_B, gpio.OUT)
-gpio.setup(ON_LED, gpio.OUT)
 
 def main():
     global pipe
@@ -36,14 +33,7 @@ def readJoystick():
     action = []
 
     while 1:
-        if ( gpio.input(ON_LED) == 0 ):
-            print ("Motor Off")
-            gpio.output(M1_A, False)
-            gpio.output(M1_B, False)
-            gpio.output(M2_A, False)
-            gpio.output(M2_B, False)
-
-        for character in pipe.read(1):
+         for character in pipe.read(1):
                 action += ['%02X' % ord(character)]
 
                 if len(action) == 8:
